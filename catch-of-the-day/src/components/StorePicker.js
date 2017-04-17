@@ -9,12 +9,11 @@ class StorePicker extends React.Component {
 	// }
 	goToStore(event) {
 		event.preventDefault();
-		const storeId = this.storeInput.value;
-		console.log(`navigating to ${storeId}`)
-		// Look at Redirect component of ReactRouter for declarative version
 		// first, get the text from the box
+		const storeId = this.storeInput.value;
 		// transition from / to /store/:storeId
 		this.context.router.transitionTo(`/store/${storeId}`)
+		// Look at Redirect component of ReactRouter for declarative version
 	}
 
 	render() {
